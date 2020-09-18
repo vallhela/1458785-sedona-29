@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Elena Gerasimova](https://up.htmlacademy.ru/htmlcss/29/user/1458785).
-* Наставник: `Неизвестно`.
+* Наставник: [Алексей Пудников](https://htmlacademy.ru/profile/id71418).
 
 ---
 
