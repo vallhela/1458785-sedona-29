@@ -4,18 +4,23 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html"><img src="https://via.placeholder.com/138x70" alt="Логотип сайта городка Седона"></a>
-      <ul>
-        <li><a>Информация</a></li>
-        <li><a href="photo.html">Фото и видео</a></li>
-        <li><a href="map.html">Карта штата</a></li>
-        <li><a href="hotels.html">Гостиницы</a></li>
+  <header class="page-header">
+    <nav class="navigation">
+      <a class="logo" href="index.html"><img src="https://via.placeholder.com/138x70" width="138" height="70"
+          alt="Логотип сайта городка Седона"></a>
+      <ul class="site-navigation">
+        <li><a class="navigation-item">Информация</a></li>
+        <li><a href="photo.html" class="navigation-item">Фото и видео</a></li>
+        <li><a href="map.html" class="navigation-item">Карта штата</a></li>
+        <li><a href="hotels.html" class="navigation-item">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -24,32 +29,32 @@
     <p>Страница находится в разработке.<br> Совсем скоро вы сможете найти здесь всю информацию о городке Седона</p>
   </main>
 
-  <footer>
-    <section>
-      <h2>Наш номер телефона</h2>
+  <footer class="page-footer">
+    <section class="contacts">
+      <h2 class="hidden">Наш номер телефона</h2>
       <p>
         &num;visitsedona<br>
-        <a href="tel:+74956660166"> Тел: +7 (495) 666-01-66 </a>
+        <a class="contacts-phone" href="tel:+74956660166"> Тел: +7(495) 666-01-66 </a>
       </p>
     </section>
-    <section>
-      <h2>Подписывайтесь на нас в соц сетях</h2>
-      <ul>
+    <section class="social">
+      <h2 class="hidden">Подписывайтесь на нас в соц сетях</h2>
+      <ul class="social-list">
         <li>
-          <a href="#">Twitter</a>
+          <a href="#" class="social-item">Twitter</a>
         </li>
         <li>
-          <a href="#">Facebook</a>
+          <a href="#" class="social-item">Facebook</a>
         </li>
         <li>
-          <a href="#">Youtube</a>
+          <a href="#" class="social-item">Youtube</a>
         </li>
       </ul>
     </section>
-    <p>
+    <p class="developer">
       website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss" target="blank">
-        <img src="https://via.placeholder.com/138x48" alt="Логотип разработчика сайта">
+      <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <img src="https://via.placeholder.com/138x48" width="138" height="48" alt="Логотип разработчика сайта">
       </a>
     </p>
   </footer>
