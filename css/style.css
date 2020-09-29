@@ -64,14 +64,19 @@
   font-family: "PT Sans", Arial, sans-serif;
   background-color: var(--white);
   width: 1200px;
+  margin: 0 auto;
 }
 
 .page-footer {
   background-color: var(--background-footer);
 }
 
-.hidden {
-  visibility: hidden;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /*navigation*/
@@ -90,7 +95,7 @@
   color: inherit;
 }
 
-.visited {
+.current-page {
   color: var(--visited-color);
 }
 
@@ -215,11 +220,7 @@
   background-color: var(--background-grey-main);
 }
 
-.infrastructure-hotels-list,
-.type-hotels-list,
-.filter-result-list,
-.star-hotels,
-.filter-result-hotels {
+.list-unstyled {
   list-style: none;
 }
 
