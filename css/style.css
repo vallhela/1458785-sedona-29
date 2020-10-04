@@ -51,6 +51,7 @@
   --text-color-main: #000000;
   --text-color: #333333;
   --text-color-rating: #666666;
+  --border-separator: #E5E5E5;
   --visited-color: #766357;
 }
 
@@ -112,6 +113,12 @@
   line-height: 26px;
   color: var(--text-color-main);
   text-transform: uppercase;
+}
+
+.description-sedona-poster {
+  background: url(../img/sedona-poster.jpg);
+  width: 1200px;
+  height: 509px;
 }
 
 .features-description {
@@ -217,7 +224,8 @@
   line-height: 21px;
   text-transform: uppercase;
   color: var(--white);
-  background-color: var(--background-grey-main);
+  background-image: url(../img/background-filter.jpg);
+  background-repeat: no-repeat;
 }
 
 .list-unstyled {
@@ -293,6 +301,14 @@
   color: var(--text-color);
 }
 
+.filter-result-hotels-item {
+  border-bottom: 1px solid var(--border-separator);
+}
+
+.filter-result-hotels-item-first {
+  border-top: 1px solid var(--border-separator);
+}
+
 .name-hotels {
   font-weight: bold;
   font-size: 21px;
@@ -343,16 +359,16 @@
   color: inherit;
 }
 
-.social-list {
-  list-style: none;
-  text-decoration: none;
-  color: inherit;
-}
-
 .social-item {
   text-decoration: none;
   color: var(--text-color-main);
   font-weight: bold;
+}
+
+.social-item-logo {
+  width: 46px;
+  height: 48px;
+  background-color: var(--background-blue);
 }
 
 .social-item:hover,
