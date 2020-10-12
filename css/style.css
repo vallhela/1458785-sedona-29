@@ -57,8 +57,8 @@
 
 /*basic*/
 .page {
-  background-color: var(--background-grey-main);
-  min-width: 1300px;
+  background-color: var(--background-grey);
+  height: 100%;
 }
 
 .page-body {
@@ -66,10 +66,25 @@
   background-color: var(--white);
   width: 1200px;
   margin: 0 auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
 .page-footer {
   background-color: var(--background-footer);
+  height: 120px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: -120px;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: 52px 52px 52px;
 }
 
 .visually-hidden {
@@ -81,6 +96,19 @@
 }
 
 /*navigation*/
+.page-header {
+  height: 56px;
+}
+
+.navigation {
+  display: grid;
+}
+
+.logo {
+  justify-self: center;
+  z-index: 1;
+}
+
 .site-navigation {
   font-style: normal;
   font-weight: bold;
@@ -119,6 +147,23 @@
   background: url(../img/sedona-poster.jpg);
   width: 1200px;
   height: 509px;
+  display: grid;
+  grid-template-rows: auto min-content;
+}
+
+.description-sedona-welcome {
+  justify-self: center;
+  padding-top: 76px;
+  margin: 0px;
+}
+
+.description-sedona-shape {
+  grid-row-start: 2;
+}
+
+.description-sedona-about {
+  text-align: center;
+  padding-top: 42px;
 }
 
 .features-description {
@@ -128,6 +173,7 @@
   line-height: 26px;
   text-transform: uppercase;
   color: var(--text-color);
+  text-align: center;
 }
 
 .features-list {
@@ -139,11 +185,92 @@
   color: var(--text-color);
   list-style: none;
   padding-inline-start: 0px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 256px 330px 256px 256px;
+  text-align: center;
+}
+
+.features-list-add {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  list-style: none;
+  padding-inline-start: 0px;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  text-align: center;
 }
 
 .features-item {
   padding: 0px;
   margin: 0px;
+}
+
+.feature-real-life {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.features-sedona-foto {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  background: none;
+}
+
+.features-rooms {
+  grid-column-start: 1;
+}
+
+.features-food {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.features-souvenirs {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.feature-diablo-bridge {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+}
+
+.features-diablo-foto {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.feature-square {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.feature-road {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.feature-tourists {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+
+.features-sedona-views {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
 }
 
 .features-title {
@@ -165,6 +292,10 @@
 .background-item-blue {
   background-color: var(--background-blue);
   color: var(--white);
+}
+
+.modal-search-hotel {
+  text-align: center;
 }
 
 .modal-search-info {
