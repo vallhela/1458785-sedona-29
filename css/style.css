@@ -75,10 +75,10 @@
 
   --color-hotels-filter-button-show-focus: #FFFFFF;
   --color-hotels-filter-button-show-hover: #FFFFFF;
-  --color-hotels-list-item:  #000000;
-  --color-hotels-list-item-active: rgba(0, 0, 0, 0.25);
-  --color-hotels-list-item-focus: #81B3D2;
-  --color-hotels-list-item-hover: #81B3D2;
+  --color-hotels-list-item-title:  #000000;
+  --color-hotels-list-item-title-active: rgba(0, 0, 0, 0.25);
+  --color-hotels-list-item-title-focus: #81B3D2;
+  --color-hotels-list-item-title-hover: #81B3D2;
   --color-hotels-list-separator: #E5E5E5;
   --color-hotels-rating-background:  #F2F2F2;
   --color-hotels-rating-text: #666666;
@@ -133,19 +133,6 @@
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.visually-as-link {
-  color: var(--color-hotels-list-item);
-}
-
-.visually-as-link:hover,
-.visually-as-link:focus {
-  color: var(--color-hotels-list-item-hover);
-}
-
-.visually-as-link:active{
-  color: var(--color-hotels-list-item-active);
 }
 
 .visually-as-button {
@@ -213,14 +200,6 @@
   align-items: center;
 }
 
-.navigation-menu-item:first-child{
-  padding-left: 73px;
-}
-
-.navigation-menu-item:last-child{
-  padding-right: 73px;
-}
-
 .navigation-menu-item{
   width: 25%;
 }
@@ -233,6 +212,14 @@
   color: var(--color-black);
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.navigation-menu-item-link-first {
+  padding-left: 73px;
+}
+
+.navigation-menu-item-link-last {
+  padding-right: 73px;
 }
 
 .navigation-menu-item-info{
@@ -274,11 +261,11 @@
 
 /* footer */
 .page-footer {
-  padding: 23px 73px 36px;
+  height: 120px;
+  padding-left: 73px;
+  padding-right: 73px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-  vertical-align: middle;
   background-color: var(--color-page-footer-background);
 }
 
@@ -291,6 +278,7 @@
   justify-content: center;
   align-items: center;
   padding-right: 25px;
+  padding-bottom: 15px;
 }
 
 .page-footer-contacts-text{
@@ -303,7 +291,7 @@
   text-decoration: none;
   color: inherit;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 /* footer - social */
@@ -311,8 +299,8 @@
   grid-column: 2;
   grid-row: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .page-footer-social-list {
@@ -323,16 +311,14 @@
   justify-content: center;
 }
 
-.page-footer-social-item{
-  margin: 3px;
-}
-
 .page-footer-social-item-link {
-  position: relative;
   width: 46px;
   height: 48px;
   background-color: var(--color-page-footer-social-item);
   display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 3px;
 }
 
 .page-footer-social-item-link:hover{
@@ -347,34 +333,19 @@
   opacity: 0.3;
 }
 
-.page-footer-social-item-link::before{
-  content: "";
-  display: block;
-  position: absolute;
+.page-footer-social-item-link-tw {
+  background-image: url(../img/twitter.svg);
+  background-size: 17px 17px;
 }
 
-.page-footer-social-item-link-tw::before{
-  top: 17px;
-  left: 15px;
-  width: 17px;
-  height: 17px;
-  background: url(../img/twitter.svg) no-repeat center;
+.page-footer-social-item-link-fb {
+  background-image: url(../img/fb-icon.svg);
+  background-size: 12px 22px;
 }
 
-.page-footer-social-item-link-fb::before {
-  top: 13px;
-  left: 17px;
-  width: 12px;
-  height: 22px;
-  background: url(../img/fb-icon.svg) no-repeat center;
-}
-
-.page-footer-social-item-link-yt::before {
-  top: 16px;
-  left: 13px;
-  width: 20px;
-  height: 16px;
-  background: url(../img/youtube.svg) no-repeat center;
+.page-footer-social-item-link-yt {
+  background-image: url(../img/youtube.svg);
+  background-size: 20px 16px;
 }
 
 /* footer - developer */
@@ -419,7 +390,7 @@
 
 /* index page */
 .index-main {
-  margin-bottom: -120px;
+  margin-bottom: -123px;
 }
 
 .description-sedona {
@@ -920,8 +891,17 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--color-hotels-list-item-title);
   text-decoration: none;
+}
+
+.hotels-list-item-title:hover,
+.hotels-list-item-title:focus {
+  color: var(--color-hotels-list-item-title-hover);
+}
+
+.hotels-list-item-title:active{
+  color: var(--color-hotels-list-item-title-active);
 }
 
 .hotels-list-item-stars{
