@@ -60,6 +60,8 @@
   --color-navigation-menu-item-hover:  #81B3D2;
   --color-navigation-menu-item-current:  #766357;
 
+  --color-page-background: #F2F2F2;
+
   --color-page-footer-background: rgba(255, 255, 255, 0.9);
   --color-page-footer-developer-logo: #231F20;
   --color-page-footer-developer-logo-active:  #bdbbbc;
@@ -94,13 +96,12 @@
   --color-hotels-sorting-direction-hover:  #000000;
 }
 
-/*basic*/
+/* page */
 .page {
-  background-color: var(--color-white);
+  background-color: var(--color-page-background);
   height: 100%;
   display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  grid-template-rows: min-content;
 }
 
 .page-body {
@@ -390,7 +391,7 @@
 
 /* index page */
 .index-main {
-  margin-bottom: -123px;
+  margin-bottom: -120px;
 }
 
 .description-sedona {
@@ -430,11 +431,11 @@
   margin: 0;
 }
 
-.features-sedona {
+.index-town-features {
   margin-top:43px;
 }
 
-.features-description {
+.index-town-features-title{
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -446,7 +447,7 @@
   padding: 0;
 }
 
-.features-list {
+.index-town-features-list {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -454,40 +455,161 @@
   text-transform: uppercase;
   color: var(--color-grey);
   list-style: none;
+  margin: 0;
+  padding: 0;
   padding-inline-start: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  grid-template-rows: 256px 330px 256px 256px;
-  text-align: center;
-  margin-top: 52px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 53px;
 }
 
-.features-list-add {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
-  color: var(--color-grey);
-  list-style: none;
-  padding-inline-start: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 400px);
-  text-align: center;
-}
-
-.features-item {
+.index-town-features-item{
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.feature-real-life {
-  grid-column-start: 1;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  grid-row-end: 1;
-  display: grid;
-  grid-template-columns: 400px 1fr;
+.index-town-features-item-img {
+  width: 800px;
+  height: 256px;
+  margin: 0;
+  padding: 0;
+}
+
+.index-town-feature {
+  width: 400px;
+  height: 256px;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.index-town-feature-title {
+  color: var(--color-grey);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  margin-top: 47px;
+}
+
+.index-town-feature-number {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 26px;
+}
+
+.index-town-feature-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 24px;
+}
+
+.index-town-feature-colored-blue {
+  background-color: var(--color-features-background-blue);
+  color: var(--color-white);
+}
+
+.index-town-feature-colored-blue .index-town-feature-title{
+  color: var(--color-white);
+}
+
+.index-town-feature-colored-blue .index-town-feature-number{
+  color: var(--color-white);
+}
+
+.index-town-feature-colored-blue .index-town-feature-description{
+  color: var(--color-white);
+}
+
+.index-town-feature-colored-grey {
+  background-color: var(--color-features-background-grey);
+}
+
+.index-town-feature-colored-grey .index-town-feature-title{
+  color: var(--color-black);
+}
+
+.index-town-feature-colored-grey .index-town-feature-number{
+  color: var(--color-grey);
+}
+
+.index-town-feature-colored-grey .index-town-feature-description{
+  color: var(--color-grey);
+}
+
+.index-town-features-general-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+}
+
+.index-town-features-general-item {
+  width: 400px;
+  height: 330px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+}
+
+.index-town-features-general-item-title {
+  margin: 0;
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.index-town-features-general-item-img {
+  margin: 0;
+  padding: 0;
+  order: -1;
+  height: 132px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.index-town-features-general-item-title::before {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.index-town-features-general-item-description {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-grey);
 }
 
 .features-sedona-foto {
@@ -528,70 +650,58 @@
   grid-row-start: 4;
 }
 
-.feature-road {
-  grid-column-start: 2;
-  grid-row-start: 4;
-}
-
-.feature-tourists {
-  grid-column-start: 3;
-  grid-row-start: 4;
-}
-
 .features-sedona-views {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 1;
 }
 
-.features-title {
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
-  text-transform: uppercase;
-}
-
-.background-item-grey {
-  background-color: var(--color-features-background-grey);
-}
-
 .background-item-white {
   background-color: var(--color-white);
 }
 
-.background-item-blue {
-  background-color: var(--color-features-background-blue);
-  color: var(--color-white);
+
+
+.index-hotel-search {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.modal-search-hotel {
-  text-align: center;
+.index-hotel-search-question {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-top: 56px;
 }
 
-.modal-search-info {
+.index-hotel-search-offer {
+  margin: 0;
+  padding: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 32px;
 }
 
-.interested {
-  font-weight: bold;
-  font-size: 30px;
-}
-
-.button-modal-search {
+.index-hotel-search-button {
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
-  color: var(--color-white);
-  border: none;
-  outline: none;
   width: 568px;
   height: 86px;
+  margin-top: 45px;
 }
 
 /*modal search hotels*/
