@@ -54,6 +54,14 @@
   --color-button-brown-focus:  #604e43;
   --color-button-brown-active:  #503e33;
 
+  --color-control-background: #F2F2F2;
+  --color-control-backgrounnd-hover: #EBEBEB;
+  --color-control-background-focus: #FFFFFF;
+  --color-control-border-focus: #E5E5E5;
+  --color-control-fill: #A9A9A9;
+  --color-control-fill-hover: #000000;
+  --color-control-fill-focus:#81B3D2;
+
   --color-navigation-menu-item: #000000;
   --color-navigation-menu-item-active:  rgba(0, 0, 0, 0.25);
   --color-navigation-menu-item-focus:   #81B3D2;
@@ -394,7 +402,7 @@
   margin-bottom: -120px;
 }
 
-.description-sedona {
+.index-town-attractor {
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -403,7 +411,7 @@
   text-transform: uppercase;
 }
 
-.description-sedona-poster {
+.index-town-attractor-poster {
   background: url(../img/sedona-poster.jpg);
   width: 1200px;
   height: 509px;
@@ -411,24 +419,21 @@
   grid-template-rows: auto min-content;
 }
 
-.description-sedona-welcome {
+.index-town-attractor-poster-welcome {
   justify-self: center;
   padding-top: 76px;
   margin: 0;
 }
 
-.description-sedona-shape {
+.index-town-attractor-poster-shape {
   grid-row-start: 2;
 }
 
-.description-sedona-about {
-  text-align: center;
-  padding-top: 42px;
-}
-
-.description-sedona-about-text {
+.index-town-attractor-about-town {
   padding: 0;
   margin: 0;
+  text-align: center;
+  padding-top: 42px;
 }
 
 .index-town-features {
@@ -612,56 +617,6 @@
   color: var(--color-grey);
 }
 
-.features-sedona-foto {
-  grid-column-start: 2;
-  grid-column-end: -1;
-  grid-row-start: 1;
-  background: none;
-}
-
-.features-rooms {
-  grid-column-start: 1;
-}
-
-.features-food {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-.features-souvenirs {
-  grid-column-start: 3;
-  grid-column-end: 4;
-}
-
-.feature-diablo-bridge {
-  grid-row-start: 3;
-  grid-row-end: 4;
-  display: grid;
-  grid-template-columns: 1fr 400px;
-}
-
-.features-diablo-foto {
-  grid-column-start: 1;
-  grid-column-end: 2;
-}
-
-.feature-square {
-  grid-column-start: 1;
-  grid-row-start: 4;
-}
-
-.features-sedona-views {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 1;
-}
-
-.background-item-white {
-  background-color: var(--color-white);
-}
-
-
-
 .index-hotel-search {
   margin: 0;
   padding: 0;
@@ -704,27 +659,138 @@
   margin-top: 45px;
 }
 
-/*modal search hotels*/
-.search-form-main {
+/*index page search form*/
+.index-search-hotel-form{
+  margin: auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 55px 458px 55px;
+  grid-template-rows: 55px auto 55px auto 55px;
+}
+
+.index-search-hotel-form-options {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.index-search-hotel-form-row {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.index-search-hotel-form-row + .index-search-hotel-form-row {
+  margin-top: 29px;
+}
+
+.index-search-hotel-form-legend {
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
   color: var(--color-black);
+
+  width: 112px;
 }
 
-.button-result-search {
-  width: 458px;
+.index-search-hotel-form-control {
+  height: 38px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  outline: none;
+  border: none;
+  background-color: var(--color-control-background);
+  display: flex;
+  width: 100%;
+}
+
+.index-search-hotel-form-editable {
+  outline: none;
+  background-color: var(--color-control-background);
+  border: 2px solid var(--color-control-background);
+  box-sizing: border-box;
+}
+
+.index-search-hotel-form-editable:hover,
+.index-search-hotel-form-editable:focus {
+  background-color: var(--color-control-backgrounnd-hover);
+  border: 2px solid var(--color-control-backgrounnd-hover);
+}
+
+.index-search-hotel-form-editable:active{
+  background-color: var(--color-control-backgrounnd-focus);
+  border: 2px solid var(--color-control-border-focus);
+}
+
+.index-search-hotel-form-control-button {
+  margin: 0;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  flex-basis: 38px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.index-search-hotel-form-control-button .index-search-hotel-form-control-button-svg {
+  fill: var(--color-control-fill);
+}
+
+.index-search-hotel-form-control-button:hover .index-search-hotel-form-control-button-svg,
+.index-search-hotel-form-control-button:focus .index-search-hotel-form-control-button-svg {
+  fill: var(--color-control-fill-hover);
+}
+
+.index-search-hotel-form-control-button:active .index-search-hotel-form-control-button-svg
+ {
+  fill: var(--color-control-fill-focus);
+}
+
+.index-search-hotel-form-control-input{
+  width: 100%;
+  padding: 0;
+  margin: 0px;
+  height: 38px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.index-search-hotel-form-date-picker{
+  width: 346px;
+  height: auto;
+}
+
+.index-search-hotel-form-counter {
+  width: 114px;
+  height: auto;
+}
+
+.index-search-hotel-form-date-picker .index-search-hotel-form-control-input {
+  width: 312px;
+}
+
+.index-search-hotel-form-submit {
+  grid-column: 2;
+  grid-row: 4;
+  width: 100%;
   height: 58px;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
-  text-transform: uppercase;
-  color: var(--color-white);
-  border: none;
-  outline: none;
 }
 
 /* hotels page */
