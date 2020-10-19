@@ -46,16 +46,16 @@
               <legend class="hotels-filter-options-features-legend">Инфраструктура:</legend>
               <ul class="hotels-filter-options-features-list list-unstyled">
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-pool" name="pool" type="checkbox" checked>
-                  <label for="hotels-filter-options-feature-pool">Бассейн</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-pool" name="pool" type="checkbox" checked>
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-pool">Бассейн</label>
                 </li>
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-parking" name="parking" type="checkbox">
-                  <label for="hotels-filter-options-feature-parking">Парковка</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-parking" name="parking" type="checkbox">
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-parking">Парковка</label>
                 </li>
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-wifi" name="wifi" type="checkbox">
-                  <label for="hotels-filter-options-feature-wifi">Wi-fi</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-wifi" name="wifi" type="checkbox">
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-wifi">Wi-fi</label>
                 </li>
               </ul>
             </fieldset>
@@ -63,30 +63,36 @@
               <legend class="hotels-filter-options-features-legend">Тип жилья:</legend>
               <ul class="hotels-filter-options-features-list list-unstyled">
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-hotel" name="hotel" type="checkbox" checked>
-                  <label for="hotels-filter-options-feature-hotel">Гостиница</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-hotel" name="hotel" type="checkbox" checked>
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-hotel">Гостиница</label>
                 </li>
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-motel" name="motel" type="checkbox" checked>
-                  <label for="hotels-filter-options-feature-motel">Мотель</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-motel" name="motel" type="checkbox" checked>
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-motel">Мотель</label>
                 </li>
                 <li class="hotels-filter-options-features-item">
-                  <input class="visually-hidden" id="hotels-filter-options-feature-appartment" name="appartment" type="checkbox" checked>
-                  <label for="hotels-filter-options-feature-appartment">Апартаменты</label>
+                  <input class="visually-hidden hotels-filter-options-feature-input" id="hotels-filter-options-feature-appartment" name="appartment" type="checkbox" checked>
+                  <label class="hotels-filter-options-feature" for="hotels-filter-options-feature-appartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="hotels-filter-options-pricing">
             <fieldset class="fieldset-unstyled">
-              <legend class="hotels-filter-options-features-legend"><label for="hotels-filter-options-pricing-price">Стоимость в сутки (Р):</label></legend>
-              <table class="hotels-filter-options-pricing-range">
-                <tr>
-                  <td class="hotels-filter-options-pricing-range-min">От 0</td>
-                  <td class="hotels-filter-options-pricing-range-max">До 3000</td>
-                </tr>
-              </table>
-              <input class="hotels-filter-options-pricing-price" id="hotels-filter-options-pricing-price" name="price" type="range">
+              <legend class="hotels-filter-options-features-legend">Стоимость в сутки (Р):</legend>
+              <div class="hotels-filter-options-pricing-range">
+                <div class="price-controls">
+                  <label class="hotels-filter-options-pricing-range-label">от <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-min" type="text" name="min-price" value="0"></label>
+                  <label class="hotels-filter-options-pricing-range-label">до <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-max" type="text" name="max-price" value="3000"></label>
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+              </div>
             </fieldset>
             <button type="button" class="hotels-filter-button-show">Показать</button>
           </div>
