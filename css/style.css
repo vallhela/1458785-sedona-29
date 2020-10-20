@@ -1011,7 +1011,7 @@
 }
 
 .hotels-filter-options-pricing-range-input-min {
-  width: 30px;
+  width: 50px;
 }
 
 .hotels-filter-options-pricing-range-input-max {
@@ -1023,8 +1023,12 @@
   width: 50%;
   text-align: center;
   padding-bottom: 2px;
-  padding-left: 22px;
+  padding-left: 42px;
   box-sizing: border-box;
+}
+
+.hotels-filter-options-pricing-range-label:last-child {
+  padding-left: 26px;
 }
 
 .hotels-filter-options-pricing-range-label:nth-child(2)::before {
@@ -1046,6 +1050,19 @@
   border: none;
   color: var(--color-white);
 }
+
+/*.hotels-filter-options-pricing-range-min-input:invalid,
+.hotels-filter-options-pricing-range-max-input:invalid {
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+
+.hotels-filter-options-pricing-range-min-input:in-range,
+.hotels-filter-options-pricing-range-max-input:in-range {
+  border: 1px solid red;
+  box-sizing: border-box;
+  background-color: red;
+}*/
 
 .range-filter {
   width: 260px;
