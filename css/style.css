@@ -854,7 +854,7 @@
   position: absolute;
   width: 12px;
   height: 3px;
-  background-color: #A9A9A9;
+  background-color: var(--color-control-fill);
   top: 18px;
   left: 13px;
 }
@@ -864,7 +864,7 @@
   position: absolute;
   width: 12px;
   height: 3px;
-  background-color: #A9A9A9;
+  background-color: var(--color-control-fill);
   top: 18px;
   left: 13px;
 }
@@ -874,7 +874,7 @@
   position: absolute;
   width: 12px;
   height: 3px;
-  background-color: #A9A9A9;
+  background-color: var(--color-control-fill)9;
   top: 18px;
   left: 13px;
   transform: rotate(90deg);
@@ -1051,19 +1051,6 @@
   color: var(--color-white);
 }
 
-/*.hotels-filter-options-pricing-range-min-input:invalid,
-.hotels-filter-options-pricing-range-max-input:invalid {
-  border: 1px solid red;
-  box-sizing: border-box;
-}
-
-.hotels-filter-options-pricing-range-min-input:in-range,
-.hotels-filter-options-pricing-range-max-input:in-range {
-  border: 1px solid red;
-  box-sizing: border-box;
-  background-color: red;
-}*/
-
 .range-filter {
   width: 260px;
   margin-top: 49px;
@@ -1119,31 +1106,30 @@
   cursor: pointer;
 }
 
-.hotels-filter-range-controls .toggle-min {
+.hotels-filter-range-controls .toggle-min,
+.hotels-filter-range-controls .toggle-max {
   top: 10px;
   position: absolute;
   left: 0;
 }
 
 .hotels-filter-range-controls .toggle-max {
-  top: 10px;
-  position: absolute;
   left: 253px;
 }
 
 .hotels-filter-range-controls .toggle-min:hover,
-.hotels-filter-range-controls .toggle-min:focus
+.hotels-filter-range-controls .toggle-min:focus,
+.hotels-filter-range-controls .toggle-max:hover,
+.hotels-filter-range-controls .toggle-max:focus
  {
-  top: 9px;
-  position: absolute;
-  left: -1px;
+   transform: scale(1);
+   top: 9px;
+   left: -1px;
 }
 
 .hotels-filter-range-controls .toggle-max:hover,
 .hotels-filter-range-controls .toggle-max:focus
  {
-  top: 9px;
-  position: absolute;
   left: 252px;
 }
 
