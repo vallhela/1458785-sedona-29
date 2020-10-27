@@ -8,33 +8,20 @@ const searchFormCheckout = document.querySelector(".index-search-hotel-form-cont
 const searchFormAdults = document.querySelector(".index-search-hotel-form-control-input-adults");
 const searchFormChildren = document.querySelector(".index-search-hotel-form-control-input-children");
 
-const checkStorageSupported = function(){
-  try {
-    localStorage.getItem("adults");
-    return true;
-  }
-  catch (err) {
-    console.log(err);
-    return false;
-  }
-};
-
-const isStorageSupported = checkStorageSupported();
+const storage = window.localStorage;
 
 searchForm.addEventListener("submit", function (evt) {
-  if (!searchFormCheckin.value
-      || !searchFormCheckout.value
-      || !searchFormAdults.value
-      || !searchFormChildren.value
-      || searchFormAdults.value <= 0
-      || searchFormChildren.value < 0){
-    evt.preventDefault();
+  if (searchFormCheckin.value
+      && searchFormCheckout.value
+      && searchFormAdults.value
+      && searchFormChildren.value){
+    if(storage){
+      storage.setItem("adults", searchFormAdults.value);
+      storage.setItem("children", searchFormChildren.value);
+    }
   }
   else {
-    if(isStorageSupported){
-      localStorage.setItem("adults", searchFormAdults.value);
-      localStorage.setItem("children", searchFormChildren.value);
-    }
+    evt.preventDefault();
   }
 });
 
@@ -44,9 +31,9 @@ searchButton.addEventListener("click", function (evt) {
   const isShown = searchForm.classList.toggle(searchFormShowClass);
   if(isShown){
     searchFormCheckin.focus();
-    if(isStorageSupported){
-      searchFormAdults.value = localStorage.getItem("adults");
-      searchFormChildren.value = localStorage.getItem("children");
+    if(storage){
+      searchFormAdults.value = storage.getItem("adults");
+      searchFormChildren.value = storage.getItem("children");
     }
   }
 });

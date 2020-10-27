@@ -4,10 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
@@ -82,8 +81,8 @@
               <legend class="hotels-filter-options-features-legend">Стоимость в сутки (Р):</legend>
               <div class="hotels-filter-options-pricing-range">
                 <div class="hotel-filter-price-controls">
-                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-min">от <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-min" id="hotels-filter-options-pricing-range-input-min" type="number" min="0" max="6000" step="100" pattern="\d [0-6000]" name="min-price" value="0"></label>
-                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-max">до <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-max" id="hotels-filter-options-pricing-range-input-max" type="number" min="0" max="6000" step="100" pattern="\d [0-6000]" name="max-price" value="3000"></label>
+                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-min">от <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-min" id="hotels-filter-options-pricing-range-input-min" type="number" min="0" max="6000" step="1" pattern="\d [0-6000]" name="min-price" value="0"></label>
+                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-max">до <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-max" id="hotels-filter-options-pricing-range-input-max" type="number" min="0" max="6000" step="1" pattern="\d [0-6000]" name="max-price" value="3000"></label>
                 </div>
                 <div class="hotels-filter-range-controls">
                   <div class="hotels-filter-range-controls-scale">
@@ -176,8 +175,8 @@
           <img src="img/photo-villas.jpg" width="135" height="90" alt="Озелененная территория апартаментов">
           <span class="hotels-list-item-type">Апартаменты</span>
           <span class="hotels-list-item-price">От 2000 р.</span>
-          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация об аппартаментах Villas at Poco Diablo" href="#">Подробнее</button>
-          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать аппартаменты Villas at Poco Diablo" href="#">Забронировать</button>
+          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация об апартаментах Villas at Poco Diablo" href="#">Подробнее</button>
+          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать апартаменты Villas at Poco Diablo" href="#">Забронировать</button>
           <span class="hotels-list-item-rating">Рейтинг: 9,2</span>
           <ul class="hotels-list-item-stars list-unstyled" aria-label="2*">
             <li class="hotels-list-item-star">
@@ -224,7 +223,7 @@
     </section>
   </footer>
 
-  <script type="text/javascript" src="js/hotels.js"></script>
+  <script type="text/javascript" src="js/hotels.min.js"></script>
 </body>
 
 </html>

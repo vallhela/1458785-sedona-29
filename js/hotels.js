@@ -2,11 +2,16 @@ const hotelPriceMin = document.getElementById("hotels-filter-options-pricing-ran
 const hotelPriceMax = document.getElementById("hotels-filter-options-pricing-range-input-max");
 const hotelsFilterForm = document.getElementById("hotels-filter-form");
 
-hotelsFilterForm.addEventListener("submit", function (evt) {
-  if (!hotelPriceMin.value
-      || !hotelPriceMax.value
-      || hotelPriceMin.value < 0
-      || Number.parseInt(hotelPriceMin.value) > Number.parseInt(hotelPriceMax.value)){
-    evt.preventDefault();
-  }
-});
+if(hotelsFilterForm){
+  hotelsFilterForm.addEventListener("submit", function (evt) {
+    if (hotelPriceMin.value && hotelPriceMax.value && parseInt(hotelPriceMin.value, 10) <= parseInt(hotelPriceMax.value, 10)){
+      // validation succeeded
+    }
+    else{
+      evt.preventDefault();
+    }
+  });
+}
+else{
+  console.log("Form was not found.");
+}
