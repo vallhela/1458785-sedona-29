@@ -48,6 +48,9 @@
   --color-black-opacity: rgba(0, 0, 0, 0.25);
   --color-white-opacity: rgba(255, 255, 255, 0.3);
 
+  --color-blue: #b2cde8;
+  --color-dark-blue: #4a7699;
+
   --color-button-blue:  #81B3D2;
   --color-button-blue-hover:   #669EC0;
   --color-button-blue-focus:   #669EC0;
@@ -114,8 +117,6 @@
 .page {
   background-color: var(--color-page-background);
   height: 100%;
-  display: grid;
-  grid-template-rows: min-content;
 }
 
 .page-body {
@@ -123,7 +124,6 @@
   background-color: var(--color-white);
   width: 1200px;
   margin: 0 auto;
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   box-shadow: 0 4px 4px var(--color-black-opacity);
@@ -374,7 +374,6 @@
   grid-row: 1;
   display: flex;
   flex-direction: row;
-  justify-content: end;
   align-items: center;
   padding-left: 90px;
 }
@@ -422,6 +421,7 @@
 }
 
 .index-town-attractor-poster {
+  background-color: var(--color-blue);
   background: url(../img/sedona-poster.jpg);
   width: 1200px;
   height: 509px;
@@ -972,6 +972,7 @@
 
 /* hotels page */
 .hotels-filter {
+  background-color: var(--color-dark-blue);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1020,11 +1021,12 @@
 .hotels-filter-options-feature::before {
   content: "";
   position: absolute;
-  display: block;
+  display: inline;
   width: 23px;
   height: 23px;
   background: url(../img/checkbox-off.svg) no-repeat;
   background-size: 23px 23px;
+  margin-left: -40px;
 }
 
 .hotels-filter-options-feature-input:checked ~ .hotels-filter-options-feature::before {

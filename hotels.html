@@ -81,8 +81,8 @@
               <legend class="hotels-filter-options-features-legend">Стоимость в сутки (Р):</legend>
               <div class="hotels-filter-options-pricing-range">
                 <div class="hotel-filter-price-controls">
-                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-min">от <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-min" id="hotels-filter-options-pricing-range-input-min" type="number" min="0" max="6000" step="1" pattern="\d [0-6000]" name="min-price" value="0"></label>
-                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-max">до <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-max" id="hotels-filter-options-pricing-range-input-max" type="number" min="0" max="6000" step="1" pattern="\d [0-6000]" name="max-price" value="3000"></label>
+                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-min">от <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-min" id="hotels-filter-options-pricing-range-input-min" type="number" min="0" max="6000" step="1" name="min-price" value="0"></label>
+                  <label class="hotels-filter-options-pricing-range-label" for="hotels-filter-options-pricing-range-input-max">до <input class="hotels-filter-options-pricing-range-input hotels-filter-options-pricing-range-input-max" id="hotels-filter-options-pricing-range-input-max" type="number" min="0" max="6000" step="1" name="max-price" value="3000"></label>
                 </div>
                 <div class="hotels-filter-range-controls">
                   <div class="hotels-filter-range-controls-scale">
@@ -109,19 +109,19 @@
           <div class="hotels-sorting-options hotels-sorting-text">
             <span class="hotels-sorting-options-header">Сортировка:</span>
             <ul class="hotels-sorting-options-list list-unstyled">
-              <li class="hotels-sorting-options-list-price hotels-sorting-options-link hotels-sorting-options-link-current"><a class="hotels-sorting-options-link" href="#"></a>По цене</a></li>
+              <li class="hotels-sorting-options-list-price hotels-sorting-options-link hotels-sorting-options-link-current"><a class="hotels-sorting-options-link" href="#">По цене</a></li>
               <li class="hotels-sorting-options-list-type"><a class="hotels-sorting-options-link" href="#">По типу</a></li>
               <li class="hotels-sorting-options-list-rating"><a class="hotels-sorting-options-link" href="#">По рейтингу</a></li>
             </ul>
           </div>
           <div class="hotels-sorting-directions">
-            <a class="hotels-sorting-direction hotels-sorting-direction-up" href="#">
+            <a class="hotels-sorting-direction hotels-sorting-direction-up" href="#" aria-label="Сортировка результатов по возрастанию">
               <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
                 <title>Сортировать по возрастанию</title>
                 <path d="M5.5 0L0 10H11L5.5 0Z"/>
               </svg>
             </a>
-            <a class="hotels-sorting-direction hotels-sorting-direction-down hotels-sorting-direction-current" href="#">
+            <a class="hotels-sorting-direction hotels-sorting-direction-down hotels-sorting-direction-current" href="#" aria-label="Сортировка результатов по убыванию">
               <svg aria-hidden="true" focusable="false" width="11" height="10" viewBox="0 0 11 10" xmlns="http://www.w3.org/2000/svg">
                 <title>Сортировать по убыванию</title>
                 <path d="M5.5 10L0 0H11"/>
@@ -137,8 +137,8 @@
           <img class="hotels-list-item-image" src="img/photo-amara.jpg" width="135" height="90" alt="Территория гостиницы с бассейном на фоне гор">
           <span class="hotels-list-item-type">Гостиница</span>
           <span class="hotels-list-item-price">От 4000 р.</span>
-          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация о гостинице Amara Resort & Spa" href="#">Подробнее</button>
-          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать гостиницу Amara Resort & Spa" href="#">Забронировать</button>
+          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация о гостинице Amara Resort & Spa">Подробнее</button>
+          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать гостиницу Amara Resort & Spa">Забронировать</button>
           <div class="hotels-list-item-rating">
             <span>Рейтинг: 8,5</span>
           </div>
@@ -158,8 +158,8 @@
           <img src="img/photo-desert.jpg" width="135" height="90" alt="Главное здание мотеля с подъезной дорогой">
           <span class="hotels-list-item-type">Мотель</span>
           <span class="hotels-list-item-price">От 3000 р.</span>
-          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация о мотеле Desert Quail Inn" href="#">Подробнее</button>
-          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать мотель Desert Quail Inn" href="#">Забронировать</button>
+          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация о мотеле Desert Quail Inn">Подробнее</button>
+          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать мотель Desert Quail Inn">Забронировать</button>
           <span class="hotels-list-item-rating">Рейтинг: 8,9</span>
           <ul class="hotels-list-item-stars list-unstyled" aria-label="3*">
             <li class="hotels-list-item-star">
@@ -175,8 +175,8 @@
           <img src="img/photo-villas.jpg" width="135" height="90" alt="Озелененная территория апартаментов">
           <span class="hotels-list-item-type">Апартаменты</span>
           <span class="hotels-list-item-price">От 2000 р.</span>
-          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация об апартаментах Villas at Poco Diablo" href="#">Подробнее</button>
-          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать апартаменты Villas at Poco Diablo" href="#">Забронировать</button>
+          <button class="hotels-list-item-button hotels-list-item-button-about visually-as-button visually-as-button-blue" aria-label="Подробная информация об апартаментах Villas at Poco Diablo">Подробнее</button>
+          <button class="hotels-list-item-button hotels-list-item-button-booking visually-as-button visually-as-button-brown" aria-label="Забронировать апартаменты Villas at Poco Diablo">Забронировать</button>
           <span class="hotels-list-item-rating">Рейтинг: 9,2</span>
           <ul class="hotels-list-item-stars list-unstyled" aria-label="2*">
             <li class="hotels-list-item-star">
@@ -223,7 +223,7 @@
     </section>
   </footer>
 
-  <script type="text/javascript" src="js/hotels.min.js"></script>
+  <script src="js/hotels.min.js"></script>
 </body>
 
 </html>
