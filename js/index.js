@@ -3,6 +3,8 @@ const searchButtonSubmit = document.querySelector(".index-search-hotel-form-subm
 const searchForm = document.querySelector(".index-search-hotel-form");
 const searchFormHideClass = "index-search-hotel-form-hide";
 const searchFormShowClass = "index-hotel-search-form-show";
+const searchFormShownClass = "index-search-hotel-form-shown";
+const searchFormErroredClass = "index-search-hotel-form-errored";
 const searchFormCheckin = document.querySelector(".index-search-hotel-form-control-input-checkin");
 const searchFormCheckout = document.querySelector(".index-search-hotel-form-control-input-checkout");
 const searchFormAdults = document.querySelector(".index-search-hotel-form-control-input-adults");
@@ -22,19 +24,32 @@ searchForm.addEventListener("submit", function (evt) {
   }
   else {
     evt.preventDefault();
+    searchForm.classList.remove(searchFormShowClass);
+    searchForm.classList.add(searchFormErroredClass);
+    setTimeout(
+      ()=>{
+        searchForm.classList.remove(searchFormErroredClass);
+      },
+      610);
   }
 });
 
 searchButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  searchForm.classList.toggle(searchFormHideClass);
-  const isShown = searchForm.classList.toggle(searchFormShowClass);
-  if(isShown){
+  const shown = searchForm.classList.toggle(searchFormShownClass);
+  if(shown){
+    searchForm.classList.remove(searchFormHideClass);
+    searchForm.classList.add(searchFormShowClass);
+
     searchFormCheckin.focus();
     if(storage){
       searchFormAdults.value = storage.getItem("adults");
       searchFormChildren.value = storage.getItem("children");
     }
+  }
+  else{
+    searchForm.classList.remove(searchFormShowClass);
+    searchForm.classList.add(searchFormHideClass);
   }
 });
 
