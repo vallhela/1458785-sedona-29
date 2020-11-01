@@ -127,6 +127,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   box-shadow: 0 4px 4px var(--color-black-opacity);
+  min-height: 100%;
 }
 
 /* generic */
@@ -421,8 +422,8 @@
 }
 
 .index-town-attractor-poster {
-  background-color: var(--color-blue);
   background: url(../img/sedona-poster.jpg);
+  background-color: var(--color-blue);
   width: 1200px;
   height: 509px;
   display: grid;
@@ -972,15 +973,14 @@
 
 /* hotels page */
 .hotels-filter {
-  background-color: var(--color-dark-blue);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
   color: var(--color-white);
-  background-image: url(../img/background-filter.jpg);
-  background-repeat: no-repeat;
+  background: url(../img/background-filter.jpg);
+  background-color: var(--color-dark-blue);
   height: 217px;
 }
 
