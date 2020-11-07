@@ -429,9 +429,10 @@
 }
 
 .index-town-attractor-poster {
-  background: url(../img/sedona-poster.jpg);
-  background-color: var(--color-blue);
-  width: 1200px;
+  text-align: center;
+  background:
+    url("../img/shape-poster.svg") no-repeat center bottom,
+    var(--color-blue) url("../img/sedona-poster.jpg") no-repeat;
   height: 509px;
   display: flex;
   flex-direction: column;
@@ -443,10 +444,6 @@
   padding-top: 76px;
   padding-bottom: 25px;
 }
-/*
-.index-town-attractor-poster-shape {
-  padding-bottom: 0;
-} */
 
 .index-town-attractor-about-town {
   padding: 0;
